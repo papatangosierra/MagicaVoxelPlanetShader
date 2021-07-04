@@ -101,7 +101,7 @@ Selectively remove a single color.   The following are examples where we have no
 
 ## Octaves
 
-Octaves are the noise function applied to itself.  More octaves will produce a more complex contour.  
+Octaves are the noise function applied recursively.  More octaves will produce a more complex contour.  
 
 <img src="images/octaves_1.png" width="350px" /><img src="images/octaves_2.png" width="350px" /><img src="images/octaves_3.png" width="350px" /><img src="images/octaves_12.png" width="350px" />
 
