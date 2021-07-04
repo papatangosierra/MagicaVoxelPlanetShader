@@ -37,9 +37,11 @@ Zoom set to 10, 60, 120,and 360
 
 <img src="images/zoom_10.png" width="120px" /><img src="images/zoom_60.png" width="120px" /><img src="images/zoom_120.png" width="120px" /><img src="images/zoom_360.png" width="120px" />
 
+## X/Y/Z Offset 
 
+You can pan the resulting noise by adjusting these values.   The following examples show the X offset at 0.0, 0.1, and 0.5:
 
-
-
-
+<img src="images/offset_0.png" width="120px" />
+<img src="images/offset_1.png" width="120px" />
+<img src="images/offset_5.png" width="120px" />
 
