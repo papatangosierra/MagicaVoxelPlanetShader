@@ -1,5 +1,11 @@
 # MagicaVoxelPlanetShader
+
+<img width="800px" src="https://cdnb.artstation.com/p/assets/images/images/039/223/757/large/mrbiggles-planet-relief.jpg?1625288458"/>
+
+
  A MagicaVoxel shader that can be used to create interesting sphere-shaped objects.  It is a compute shader based off of various other shaders from people smarter than I.  It uses simplex noise found on the web.  I cobbled it together to help create intresting planet-looking structures during a game jam and decided to make it available to other people who are much more artistic than I.
+
+
 
 If you make something pretty with this, please send me something to my gmail!   mrbiggles7719 is my username.
 
