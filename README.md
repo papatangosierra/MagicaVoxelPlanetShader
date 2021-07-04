@@ -14,7 +14,9 @@ Simply put the planet1.txt file in your MagicaVoxel shaders directory, and put c
 
 
 ##  Getting Started
+
 After seelctinbg the shader, you will see a result that looks something like this:
+
 
 [Default Planet and Palette](<img width="350px" src="images/default_planet.png"/>
 
