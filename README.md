@@ -41,7 +41,52 @@ Zoom set to 10, 60, 120,and 360
 
 You can pan the resulting noise by adjusting these values.   The following examples show the X offset at 0.0, 0.1, and 0.5:
 
-<img src="images/offset_0.png" width="120px" />
-<img src="images/offset_1.png" width="120px" />
-<img src="images/offset_5.png" width="120px" />
+<img src="images/offset_0.png" width="120px" /><img src="images/offset_1.png" width="120px" /><img src="images/offset_5.png" width="120px" />
+
+## StartColor
+
+<img src="images/startcolor_1.png" width="120px" /><img src="images/startcolor_30.png" width="120px" />
+
+## EndColor
+
+<img src="images/endcolor_30.png" width="120px" /><img src="images/endcolor_128.png" width="120px" />
+
+## Cut-off
+
+This value can be used to create eroded/cavernous structures.
+
+The following are cut-off values of 0 (default), 33, and 128:
+<img src="images/cutoff_0.png" width="120px" /><img src="images/cutoff_33.png" width="120px" /><img src="images/cutoff_128.png" width="120px" />
+
+## Relief
+Along with WaterThresh, this can be used to add a bit of releif to the model.   This method simply removes 'water' from the upper layers, so it can make the 'land' look like it's tpaered out if it's too  high.
+
+<img src="images/relief_0.png" width="120px" /><img src="images/relief_1.png" width="120px" /><img src="images/relief_2.png" width="120px" />
+
+## WaterThresh
+
+The following are examples of setting waterthresh to 1, 60, and 120:
+
+<img src="images/waterthresh_1.png" width="120px" /><img src="images/waterthresh_60.png" width="120px" /><img src="images/waterthresh_2.png" width="120px" />
+
+## RemoveColor
+
+Selectively remove a single color.   The following are examples where we have no removeal and one with the 2nd index removed (out of 5 total colors):
+
+<img src="images/removecolor_0.png" width="120px" /><img src="images/removecolor_1.png" width="120px" />
+
+## Octaves
+
+Octaves are essentialyl the number of times the noise is called on itself.  More octaves will produce a more complex contour.  
+
+<img src="images/octaves_1.png" width="120px" /><img src="images/octaves_2.png" width="120px" /><img src="images/octaves_3.png" width="120px" /><img src="images/octaves_12.png" width="120px" />
+
+
+
+
+
+
+
+
+
 
