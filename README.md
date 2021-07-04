@@ -54,25 +54,25 @@ I have more examples of what you can do with this shader here:
 
 Zoom set to 10, 60, 120,and 360
 
-<img src="images/zoom_10.png" width="250px" /><img src="images/zoom_60.png" width="250px" /><img src="images/zoom_120.png" width="250px" /><img src="images/zoom_360.png" width="250px" />
+<img src="images/zoom_10.png" width="350px" /><img src="images/zoom_60.png" width="350px" /><img src="images/zoom_120.png" width="350px" /><img src="images/zoom_360.png" width="350px" />
 
 ## X/Y/Z Offset 
 
 You can pan the resulting noise by adjusting these values.   The following examples show the X offset at 0.0, 0.1, and 0.5:
 
-<img src="images/offset_0.png" width="250px" /><img src="images/offset_1.png" width="250px" /><img src="images/offset_5.png" width="250px" />
+<img src="images/offset_0.png" width="350px" /><img src="images/offset_1.png" width="350px" /><img src="images/offset_5.png" width="350px" />
 
 ## StartColor
 
 Startcolor set to 1 and 30:
 
-<img src="images/startcolor_1.png" width="250px" /><img src="images/startcolor_30.png" width="250px" />
+<img src="images/startcolor_1.png" width="350px" /><img src="images/startcolor_30.png" width="350px" />
 
 ## EndColor
 
 EndColor set to 30 and 120:
 
-<img src="images/endcolor_30.png" width="250px" /><img src="images/endcolor_128.png" width="250px" />
+<img src="images/endcolor_30.png" width="350px" /><img src="images/endcolor_128.png" width="350px" />
 
 ## Cut-off
 
@@ -80,50 +80,50 @@ This value can be used to create eroded/cavernous structures.
 
 The following are cut-off values of 0 (default), 33, and 128:
 
-<img src="images/cutoff_0.png" width="250px" /><img src="images/cutoff_33.png" width="250px" /><img src="images/cutoff_128.png" width="250px" />
+<img src="images/cutoff_0.png" width="350px" /><img src="images/cutoff_33.png" width="350px" /><img src="images/cutoff_128.png" width="350px" />
 
 ## Relief
-Along with WaterThresh, this can be used to add a bit of releif to the model.   This method simply removes 'water' from the upper layers, so it can make the 'land' look like it's tpaered out if it's too  high.
+Along with WaterThresh, this can be used to add a bit of releif to the model.   This method simply removes 'water' from the upper layers, so it can make the 'land' look like it's tapered out if it's too  high.
 
-<img src="images/relief_0.png" width="250px" /><img src="images/relief_1.png" width="250px" /><img src="images/relief_2.png" width="250px" />
+<img src="images/relief_0.png" width="350px" /><img src="images/relief_1.png" width="350px" /><img src="images/relief_2.png" width="350px" />
 
 ## WaterThresh
 
 The following are examples of setting waterthresh to 1, 60, and 120:
 
-<img src="images/waterthresh_1.png" width="250px" /><img src="images/waterthresh_60.png" width="250px" /><img src="images/waterthresh_2.png" width="250px" />
+<img src="images/waterthresh_1.png" width="350px" /><img src="images/waterthresh_60.png" width="350px" /><img src="images/waterthresh_120.png" width="350px" />
 
 ## RemoveColor
 
 Selectively remove a single color.   The following are examples where we have no removeal and one with the 2nd index removed (out of 5 total colors):
 
-<img src="images/removecolor_0.png" width="250px" /><img src="images/removecolor_2.png" width="250px" />
+<img src="images/removecolor_0.png" width="350px" /><img src="images/removecolor_2.png" width="350px" />
 
 ## Octaves
 
 Octaves are the noise function applied to itself.  More octaves will produce a more complex contour.  
 
-<img src="images/octaves_1.png" width="250px" /><img src="images/octaves_2.png" width="250px" /><img src="images/octaves_3.png" width="250px" /><img src="images/octaves_12.png" width="250px" />
+<img src="images/octaves_1.png" width="350px" /><img src="images/octaves_2.png" width="350px" /><img src="images/octaves_3.png" width="350px" /><img src="images/octaves_12.png" width="350px" />
 
 ## OctaveMultiplier
 
 This multiplier influnces the input of the noise function.  Each octave the values passed to the noise function are multiplied by this value.  Reducing this value can give you more simple contours as well.
 
-<img src="images/octmult_1.png" width="250px" /><img src="images/octtmult_2.png" width="250px" /><img src="images/octmult_3.png" width="250px" />
+<img src="images/octmult_1.png" width="350px" /><img src="images/octtmult_2.png" width="350px" /><img src="images/octmult_3.png" width="350px" />
 
 
 ## Amplitude
 
 This influnces the height of the noise waves. The following are amplitudes set to 0.1, 0.2, 0.3, 0.5, and 1.0, respectively:
 
-<img src="images/amp_1.png" width="250px" /><img src="images/amp_2.png" width="250px" /><img src="images/amp_3.png" width="250px" /><img src="images/amp_5.png" width="250px" /><img src="images/amp_10.png" width="250px" />
+<img src="images/amp_1.png" width="350px" /><img src="images/amp_2.png" width="350px" /><img src="images/amp_3.png" width="350px" /><img src="images/amp_5.png" width="350px" /><img src="images/amp_10.png" width="350px" />
 
 
 ## AmplitudeMultiplier
 
 This influences the influence of the amplitude for each octave.  The following are values of 0.1, 0.2, 0.3, 0.5, and 1.0, respectively:
 
-<img src="images/ampmult_1.png" width="250px" /><img src="images/ampmult_2.png" width="250px" /><img src="images/ampmult_3.png" width="250px" /><img src="images/ampmult_5.png" width="250px" /><img src="images/ampmult_7.png" width="250px" />
+<img src="images/ampmult_1.png" width="350px" /><img src="images/ampmult_2.png" width="350px" /><img src="images/ampmult_3.png" width="350px" /><img src="images/ampmult_5.png" width="350px" /><img src="images/ampmult_7.png" width="350px" />
 
 
 
