@@ -17,6 +17,7 @@
 
 // xs_end
 
+// https://github.com/mrbiggles7719/MagicaVoxelPlanetShader
 
 vec3 mod289(vec3 x)
 {
