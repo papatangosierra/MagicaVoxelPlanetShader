@@ -1,5 +1,11 @@
 # MagicaVoxelPlanetShader
- A Magicavoxel shader that can be used to create interesting sphere-shaped objects
+ A MagicaVoxel shader that can be used to create interesting sphere-shaped objects.  It is a compute shader based off of various other shaders from people smarter than I.  It uses simplex noise found on the web.  I cobbled it together to help create intresting planet-looking structures during a game jam and decided to make it available to other people who are much more artistic than I.
+
+If you make something pretty with this, please send me something to my gmail!   mrbiggles7719 is my username.
+
+## Installation
+Simply put the planet1.txt file in your MagicaVoxel shaders directory, and put copy the pallettes to someplace where you can load them. 
+
 
 ##  Getting Started
 After seelctinbg the shader, you will see a result that looks something like this:
@@ -11,9 +17,13 @@ This looks like a mess because the default palette is fairly erratic.  You can c
 
 <img src="images/default_planet_landmass.png" width="250px" />
 
+I have more examples of what you can do with this shader here:
+
+[MrBiggles ArtStation](https://mrbiggles7719.artstation.com/projects/189KNZ)
+
 ## Parameters
 
-| Parameter         | Descruotuib|
+| Parameter         | Description |
 | ---               | ---       |
 | Zoom              | Determines scale of our noise.  Smaller values is more 'zoomed out', larger more 'zoomed in'  |
 | X/Y/Z Offset      | Translation of our noise.  You can use this to 'move' around int he noise. |
@@ -45,9 +55,13 @@ You can pan the resulting noise by adjusting these values.   The following examp
 
 ## StartColor
 
+Startcolor set to 1 and 30:
+
 <img src="images/startcolor_1.png" width="120px" /><img src="images/startcolor_30.png" width="120px" />
 
 ## EndColor
+
+EndColor set to 30 and 120:
 
 <img src="images/endcolor_30.png" width="120px" /><img src="images/endcolor_128.png" width="120px" />
 
@@ -56,6 +70,7 @@ You can pan the resulting noise by adjusting these values.   The following examp
 This value can be used to create eroded/cavernous structures.
 
 The following are cut-off values of 0 (default), 33, and 128:
+
 <img src="images/cutoff_0.png" width="120px" /><img src="images/cutoff_33.png" width="120px" /><img src="images/cutoff_128.png" width="120px" />
 
 ## Relief
@@ -77,14 +92,29 @@ Selectively remove a single color.   The following are examples where we have no
 
 ## Octaves
 
-Octaves are essentialyl the number of times the noise is called on itself.  More octaves will produce a more complex contour.  
+Octaves are the noise function applied to itself.  More octaves will produce a more complex contour.  
 
 <img src="images/octaves_1.png" width="120px" /><img src="images/octaves_2.png" width="120px" /><img src="images/octaves_3.png" width="120px" /><img src="images/octaves_12.png" width="120px" />
 
+## OctaveMultiplier
+
+This multiplier influnces the input of the noise function.  Each octave the values passed to the noise function are multiplied by this value.  Reducing this value can give you more simple contours as well.
+
+<img src="images/octmult_1.png" width="120px" /><img src="images/octtmult_2.png" width="120px" /><img src="images/octmult_3.png" width="120px" />
 
 
+## Amplitude
+
+This influnces the height of the noise waves. The following are amplitudes set to 0.1, 0.2, 0.3, 0.5, and 1.0, respectively:
+
+<img src="images/amp_1.png" width="120px" /><img src="images/amp_2.png" width="120px" /><img src="images/amp_3.png" width="120px" /><img src="images/amp_5.png" width="120px" /><img src="images/amp_10.png" width="120px" />
 
 
+## AmplitudeMultiplier
+
+This influences the influence of the amplitude for each octave.  The following are values of 0.1, 0.2, 0.3, 0.5, and 1.0, respectively:
+
+<img src="images/ampmult_1.png" width="120px" /><img src="images/ampmult_2.png" width="120px" /><img src="images/ampmult_3.png" width="120px" /><img src="images/ampmult_5.png" width="120px" /><img src="images/ampmult_7.png" width="120px" />
 
 
 
