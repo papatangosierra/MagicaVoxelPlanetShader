@@ -10,12 +10,12 @@ Simply put the planet1.txt file in your MagicaVoxel shaders directory, and put c
 ##  Getting Started
 After seelctinbg the shader, you will see a result that looks something like this:
 
-[Default Planet and Palette](<img width="250px" src="images/default_planet.png"/>
+[Default Planet and Palette](<img width="350px" src="images/default_planet.png"/>
 
 
 This looks like a mess because the default palette is fairly erratic.  You can create your own pallete,or load one of the ones provided in this repo.
 
-<img src="images/default_planet_landmass.png" width="250px" />
+<img src="images/default_planet_landmass.png" width="350px" />
 
 I have more examples of what you can do with this shader here:
 
