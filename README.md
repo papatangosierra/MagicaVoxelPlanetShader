@@ -35,13 +35,7 @@ This looks like a mess because the default palette is fairly erratic.  You can c
 
 Zoom set to 10, 60, 120,and 360
 
-<img src="images/zoom_10.png" width="250px" />
-
-<img src="images/zoom_60.png" width="250px" />
-
-<img src="images/zoom_120.png" width="250px" />
-
-<img src="images/zoom_360.png" width="250px" />
+<img src="images/zoom_10.png" width="120px" /><img src="images/zoom_60.png" width="120px" /><img src="images/zoom_120.png" width="120px" /><img src="images/zoom_360.png" width="120px" />
 
 
 
