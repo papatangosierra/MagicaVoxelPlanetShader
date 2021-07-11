@@ -11,7 +11,7 @@
 // arg : { var = 'removecolor'	name = 'RemoveColor' value = '-1'  precision='1' range = '-1 255' step = '1' decimal='0' }
 // arg : { var = 'octaves'	name = 'Octaves' value = '3'  precision='1' range = '1 100' step = '1' decimal='0' }
 // arg : { var = 'octaveMultiplier'	name = 'OctaveMultiple' value = '3'  precision='1' range = '0.1 100' step = '0.1' decimal='1' }
-// arg : { var = 'amplitude'	name = 'Amplitude' value = '0.3    '  precision='12' range = '0.1 10.0' step = '0.1' decimal='1' }
+// arg : { var = 'amplitude'	name = 'Amplitude' value = '0.3'  precision='12' range = '0.1 10.0' step = '0.1' decimal='1' }
 // arg : { var = 'ampmultiplier'	name = 'AmplitudeMultiplier' value = '0.5'  precision='12' range = '0.1 5.0' step = '0.1' decimal='1' }
 // arg : { var = 'remapType'	name = 'RemapType' value = '0'  precision='1' range = '0 1' step = '1' decimal='0' }
 
@@ -212,15 +212,15 @@ vec3 snoise_grad(vec3 v)
 
 
 float mapNoise(vec3 v) {
-    float t = 0;
+    float t = 0.0;
     float am = amplitude;
     vec3 offset = vec3(xoffset,yoffset,zoffset);
-    for(int i = 0; i < octaves; i++) {
-        t += snoise_grad(v + offset) * am;
+    for(int i = 0; i < int(octaves); i++) {
+        t += snoise_grad(v + offset).t * am;
         v = v * octaveMultiplier;
         am *= ampmultiplier;
     }
-    if(remapType == 1) {
+    if(remapType == 1.) {
         t = (t - -1.0);
     } else {
         t = abs(t);
@@ -239,8 +239,8 @@ float map( vec3 v ) {
     const float PI = 3.1415926;
     vec3 center = iVolumeSize * 0.5;
     float radius = min( min( center.x, center.y ), center.z ) - reliefheight;
-    float innerRadius = radius - reliefheight/2;
-    float outerRadius =  radius + reliefheight/2;
+    float innerRadius = radius - reliefheight/2.;
+    float outerRadius =  radius + reliefheight/2.;
     bool isWater = false;
     
 
@@ -261,12 +261,12 @@ float map( vec3 v ) {
     }
 
 
-    if(cutoff < 0) {
+    if(cutoff < 0.) {
         if(idx < cutoff*-1.0) {
             return -1.0;
         }
     }
-    if(cutoff > 0) {
+    if(cutoff > 0.) {
             if(idx > cutoff) {
             return -1.0;
         }

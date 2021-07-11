@@ -412,7 +412,7 @@ float mapNoise(vec3 v) {
         amp *= persistence;
         zoomFactor /= 2.0;
     }
-    if(noiseType == 0) {
+    if(int(noiseType) == 0) {
         t = smoothstep(-1.0,1.0,t);
     } else {
       t = smoothstep(0.0,1.0,t);
@@ -425,9 +425,9 @@ float mapNoise(vec3 v) {
         float b = 1.0;
    // }
 
-	int c = floor(startcolor);
-	int d = floor(endcolor);
-	float newT = (t-a)/(b-a) * (d-c) + c;
+	int c = int(floor(startcolor));
+	int d = int(floor(endcolor));
+	float newT = (t-a)/(b-a) * float((d-c) + c);
     //newT /= maxAmp; //  shift
   // newT = smoothstep(waterthreshcolor,endcolor,newT);
    return newT;
@@ -439,8 +439,8 @@ float map( vec3 v ) {
     const float PI = 3.1415926;
     vec3 center = iVolumeSize * 0.5;
     float radius = min( min( center.x, center.y ), center.z ) - reliefheight;
-    float innerRadius = radius - reliefheight/2;
-    float outerRadius =  radius + reliefheight/2;
+    float innerRadius = radius - reliefheight/2.;
+    float outerRadius =  radius + reliefheight/2.;
     
     float reliefSteps = (255.0 - waterthreshcolor) / reliefheight;
     float distance = length( v + 0.5 - center );
@@ -449,28 +449,28 @@ float map( vec3 v ) {
 
 
 
-    if(removecolor < 0) {
+    if(removecolor < 0.) {
         if(int(idx) != int(abs(removecolor))) {
         	return 0.0;
         }
-    } else if(removecolor > 0) {
+    } else if(removecolor > 0.) {
         if(int(idx) == int(abs(removecolor))) {
         	    return 0.0;
         }
     }
 
-    if(cutoff < 0) {
+    if(cutoff < 0.) {
         if(idx < cutoff*-1.0) {
             return -1.0;
         }
     }
-    if(cutoff > 0) {
+    if(cutoff > 0.) {
         if(idx > cutoff) {
             return -1.0;
         }
     }
 
-    if(reliefheight != 0) {
+    if(reliefheight != 0.) {
         if((distance >= innerRadius) && (distance <= outerRadius)) {
             if(int(distStep) > int(myStep)) {
                 return -1.0;
@@ -488,7 +488,7 @@ float map( vec3 v ) {
 
     //  Everything just below our radius
     if((distance >= innerRadius) && (distance <= outerRadius) ) {
-        if(int(idx) <= waterthreshcolor) {
+        if(int(idx) <= int(waterthreshcolor)) {
             return 0.0;
         } else {
             return idx;

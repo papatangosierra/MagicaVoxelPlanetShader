@@ -16,7 +16,6 @@
 // arg : { var = 'reliefheight'	name = 'ReliefHeight' value = '0'  precision='1' range = '0 254' step = '1' decimal='0' }
 // xs_end
 
-
 float seed = iIter;
 
 
@@ -657,16 +656,16 @@ float mapNoise(vec3 v) {
     vec3 offset = vec3(xoffset,yoffset,0);
     float t = 0.0;
     v += offset;
-	float _freq = 1 * (1/freq);
+	float _freq = 1.0 * (1.0/freq);
     float amp = amplitude;
-	float _lacunarity = lacunarity/10;
+	float _lacunarity = lacunarity/10.0;
     float maxAmp = 0.0;
     for(int i = 0; i < int(octaves); i++) {
 	    if(i == 0) { 
             if(int(noiseType) == 0) {
-                t +=snoise(v*_freq)  * amp;      
+                t +=snoise(v*_freq) * amp;      
             } else if(int(noiseType) == 1) {
-                vec2 n =  worley(v*_freq*2, jitter, false);
+                vec2 n =  worley(v*_freq*2., jitter, false);
                 t += (n.y - n.x) * amp - 0.25;
             } else if(int(noiseType) == 2) {
                 t +=clover_noise_3d(v*_freq)  * amp - 0.5;      
@@ -696,9 +695,9 @@ float mapNoise(vec3 v) {
 	
    //t = t * 0.5 + 0.5;
 
-	int c = floor(startcolor);
-	int d = floor(endcolor);
-	float newT = (t-a)/(b-a) * (d-c) + c;
+	int c = int(floor(startcolor));
+	int d = int(floor(endcolor));
+	float newT = (t-a)/(b-a) * float((d-c) + c);
     //newT /= maxAmp; //  shift
   // newT = smoothstep(waterthreshcolor,endcolor,newT);
    return newT;
@@ -716,8 +715,8 @@ float map( vec3 v ) {
 
     
     float reliefSteps = abs((256.0 - waterthreshcolor) / reliefheight);
-    float innerRadius = radius - reliefheight/2;
-    float outerRadius =  radius + reliefheight/2;
+    float innerRadius = radius - reliefheight/2.;
+    float outerRadius =  radius + reliefheight/2.;
 
     float distance = length( v + 0.5 - center );
     float myStep = (idx - waterthreshcolor) / reliefSteps;
@@ -740,18 +739,18 @@ float map( vec3 v ) {
      return -1.0;
     }
 
-    if(cutoff < 0) {
+    if(cutoff < 0.) {
         if(idx < cutoff*-1.0) {
             return -1.0;
         }
     }
-    if(cutoff > 0) {
+    if(cutoff > 0.) {
         if(idx > cutoff) {
             return -1.0;
         }
     }
 
-    if(reliefheight != 0) {
+    if(reliefheight != 0.) {
         //  if we are above innerRadius, but below outerRadius, use a step-based function
         //  to determine if a color should be displayed.
         if((distance >= innerRadius) && (distance <= outerRadius)) {
@@ -759,7 +758,7 @@ float map( vec3 v ) {
             if(idx > thisThresh) {
                 return idx;
             } else {
-                return -1;
+                return -1.;
             }
 
         }
